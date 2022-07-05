@@ -9,25 +9,15 @@ import React, { useEffect, useState } from "react";
 import twitterLogo from "./assets/twitter-logo.svg";
 import myEpicNft from "./utils/MyEpicNFT.json";
 
-const TWITTER_HANDLE = "れいあむちゃん";
-const TWITTER_LINK = `https://twitter.com/${Re_1_4m}`;
+const TWITTER_HANDLE = "Re_1_4m";
+const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "";
-const TOTAL_MINT_COUNT = 5;
+const TOTAL_MINT_COUNT = 10;
 
 // コントラクトアドレスをCONTRACT_ADDRESS変数に格納
 const CONTRACT_ADDRESS = "0x69087f49B5437f80d1917B0DF937bfa7b88dBb70";
 
 const App = () => {
-
-  // 正しいネットワークに接続しているかチェックします。
-  let chainId = await ethereum.request({ method: "eth_chainId" });
-  console.log("Connected to chain " + chainId);
-  // 0x4 は　Rinkeby の ID です。
-  const rinkebyChainId = "0x4";
-  if (chainId !== rinkebyChainId) {
-    alert("You are not connected to the Rinkeby Test Network!");
-  }
-
   // ユーザーのウォレットアドレスを格納するために使用する状態変数を定義します。
   const [currentAccount, setCurrentAccount] = useState("");
 
@@ -179,7 +169,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header gradient-text">My NFT Collection</p>
-          <p className="sub-text">あなただけの特別な NFT を Mint しよう??</p>
+          <p className="sub-text">あなただけの特別な NFT を Mint しよう🌟</p>
           {/*条件付きレンダリング。
           // すでにウォレット接続されている場合は、
           // Mint NFT を表示する。*/}
